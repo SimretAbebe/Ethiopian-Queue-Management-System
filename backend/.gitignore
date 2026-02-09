@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+venv/
+.env
+
+# Database
+db.sqlite3
+
+# Logs
+logs/
+
+# IDE specific files (e.g., Cursor)
+.cursor/
+.idea/
+*.log
+
+# Operating System files
+.DS_Store
+Thumbs.db

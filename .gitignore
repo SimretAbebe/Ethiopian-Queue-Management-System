@@ -1,0 +1,170 @@
+
+# Ethiopian Queue Management System
+# Combined .gitignore for Backend & Frontend
+
+
+
+# BACKEND (Django/Python)
+
+
+# Python bytecode
+backend/__pycache__/
+backend/**/__pycache__/
+backend/*.py[cod]
+backend/**/*.py[cod]
+*.pyc
+__pycache__/
+
+# Virtual Environment
+backend/venv/
+backend/.venv/
+venv/
+.venv/
+env/
+
+# Environment Variables
+backend/.env
+backend/.env.local
+backend/.env.production
+
+# Database
+backend/db.sqlite3
+backend/*.sqlite3
+*.sqlite3
+
+# Logs
+backend/logs/
+backend/*.log
+
+# Static files (collected)
+backend/staticfiles/
+backend/static/
+
+# Media files (user uploads)
+backend/media/
+
+# Django stuff
+backend/*.pot
+backend/*.mo
+
+# Pytest / Coverage
+backend/.pytest_cache/
+backend/.coverage
+backend/htmlcov/
+backend/coverage.xml
+
+
+# FRONTEND (React/Vite/Node.js)
+
+
+# Dependencies
+frontend/node_modules/
+node_modules/
+
+# Build outputs
+frontend/dist/
+frontend/dist-ssr/
+frontend/build/
+
+# Environment Variables
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# Logs
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+frontend/lerna-debug.log*
+
+# Local files
+frontend/*.local
+
+# TypeScript cache
+frontend/*.tsbuildinfo
+
+
+# IDE & EDITORS
+
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains (PyCharm, WebStorm)
+.idea/
+*.iml
+
+# Cursor
+.cursor/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.sw?
+*.swo
+*.swp
+
+# ================================
+# OPERATING SYSTEM
+# ================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+
+# Linux
+*~
+.fuse_hidden*
+.Trash-*
+
+# ================================
+# MISCELLANEOUS
+# ================================
+
+# Secrets (never commit these!)
+*.pem
+*.key
+secrets/
+.secrets
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Debug
+*.log
+debug/
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Docker (if added later)
+.docker/
+
+# Documentation build
+docs/_build/
