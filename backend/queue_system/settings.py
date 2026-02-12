@@ -177,7 +177,7 @@ CORS_ALLOWED_ORIGINS = [
 # Add Render/Vercel domains from environment variable
 cors_origins_env = os.getenv("CORS_ALLOWED_ORIGINS")
 if cors_origins_env:
-    CORS_ALLOWED_ORIGINS += cors_origins_env.split(",")
+    CORS_ALLOWED_ORIGINS += [origin.strip() for origin in cors_origins_env.split(",")]
 
 CORS_ALLOW_CREDENTIALS = True  # Allow cookies/auth headers
 
