@@ -200,6 +200,15 @@ SIMPLE_JWT = {
     'UPDATE_LAST_LOGIN': True,
 }
 
+# Ensure logs directory exists
+LOG_DIR = BASE_DIR / 'logs'
+if not LOG_DIR.exists():
+    try:
+        LOG_DIR.mkdir(parents=True, exist_ok=True)
+        print(f"Created logging directory at {LOG_DIR}")
+    except Exception as e:
+        print(f"Failed to create logging directory: {e}")
+
 # Logging Configuration
 LOGGING = {
     'version': 1,
