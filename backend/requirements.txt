@@ -94,8 +94,7 @@ pyasn1==0.6.1
 pyasn1_modules==0.4.2
 pybase64==1.4.3
 pycparser==2.23
-pydantic==2.5.0
-pydantic_core==2.14.1
+
 pydeck==0.9.1
 Pygments==2.19.2
 PyJWT==2.11.0
