@@ -10,45 +10,45 @@ interface Office {
   services: string[];
 }
 
-const ethiopianOffices: Office[] = [
+const serviceCenters: Office[] = [
   {
-    id: 'moh',
-    name: 'Ministry of Health',
+    id: 'health',
+    name: 'Health Services',
     services: ['Medical Certificate', 'Health Clearance', 'License Renewal', 'Drug Registration'],
   },
   {
-    id: 'moe',
-    name: 'Ministry of Education',
+    id: 'edu',
+    name: 'Education Bureau',
     services: ['Document Verification', 'Certificate Authentication', 'Equivalence Assessment', 'Student Records'],
   },
   {
-    id: 'mot',
-    name: 'Ministry of Transport',
+    id: 'trans',
+    name: 'Transport Department',
     services: ['Driving License', 'Vehicle Registration', 'Transport Permit', 'License Renewal'],
   },
   {
-    id: 'moti',
-    name: 'Ministry of Trade and Industry',
+    id: 'trade',
+    name: 'Commercial Affairs',
     services: ['Business License', 'Trade Registration', 'Import/Export Permit', 'Company Registration'],
   },
   {
-    id: 'moa',
-    name: 'Ministry of Agriculture',
+    id: 'agri',
+    name: 'Agriculture Office',
     services: ['Land Registration', 'Agricultural Permit', 'Export Certificate', 'Livestock Registration'],
   },
   {
-    id: 'erca',
-    name: 'Ethiopian Revenue and Customs Authority',
+    id: 'revenue',
+    name: 'Revenue Services',
     services: ['Tax Clearance', 'TIN Registration', 'Customs Declaration', 'Tax Filing'],
   },
   {
-    id: 'eep',
-    name: 'Ethiopian Electric Power',
+    id: 'power',
+    name: 'Power Utility',
     services: ['New Connection', 'Meter Reading', 'Bill Payment', 'Power Upgrade'],
   },
   {
-    id: 'aaca',
-    name: 'Addis Ababa City Administration',
+    id: 'admin',
+    name: 'City Administration',
     services: ['ID Card', 'Birth Certificate', 'Residence Permit', 'Building Permit'],
   },
 ];
@@ -73,7 +73,7 @@ export const CitizenDashboard = () => {
   const [activeTab, setActiveTab] = useState<'new' | 'mytickets'>('new');
   const [filterStatus, setFilterStatus] = useState<'all' | 'waiting' | 'serving' | 'completed' | 'cancelled'>('all');
 
-  const selectedOffice = ethiopianOffices.find(o => o.id === selectedOfficeId);
+  const selectedOffice = serviceCenters.find(o => o.id === selectedOfficeId);
   const isOtherSelected = selectedService === 'Other';
 
   const handleGetTicket = () => {
@@ -202,9 +202,9 @@ export const CitizenDashboard = () => {
           <div className="space-y-6 animate-slideInUp">
             {/* Step 1: Select Office */}
             <div>
-              <h2 className="text-xl font-bold text-black mb-4">Step 1: Select Government Office</h2>
+              <h2 className="text-xl font-bold text-black mb-4">Step 1: Select Service Center</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {ethiopianOffices.map((office, index) => (
+                {serviceCenters.map((office, index) => (
                   <div
                     key={office.id}
                     onClick={() => {
@@ -237,7 +237,7 @@ export const CitizenDashboard = () => {
                   <Building2 className="w-10 h-10 text-blue-800" />
                   <div>
                     <p className="font-semibold text-black">{selectedOffice.name}</p>
-                    <p className="text-sm text-gray-600">Selected Office</p>
+                    <p className="text-sm text-gray-600">Selected Center</p>
                   </div>
                 </div>
                 <div className="grid grid-cols-2 gap-3 mb-4">

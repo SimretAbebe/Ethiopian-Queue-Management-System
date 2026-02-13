@@ -7,15 +7,15 @@ interface Office {
   name: string;
 }
 
-const ethiopianOffices: Office[] = [
-  { name: 'Ministry of Health' },
-  { name: 'Ministry of Education' },
-  { name: 'Ministry of Transport' },
-  { name: 'Ministry of Trade and Industry' },
-  { name: 'Ministry of Agriculture' },
-  { name: 'Ethiopian Revenue and Customs Authority' },
-  { name: 'Ethiopian Electric Power' },
-  { name: 'Addis Ababa City Administration' },
+const serviceCenters: Office[] = [
+  { name: 'Health Services' },
+  { name: 'Education Bureau' },
+  { name: 'Transport Department' },
+  { name: 'Commericial Affairs' },
+  { name: 'Agriculture Office' },
+  { name: 'Revenue Services' },
+  { name: 'Power Utility' },
+  { name: 'City Administration' },
 ];
 
 const features = [
@@ -59,10 +59,10 @@ export const HomePage = () => {
             <Building2 className="h-12 w-12 text-blue-800" />
           </div>
           <h1 className="text-5xl font-bold text-black leading-tight">
-            Ethiopian Citizens Service<br />Queue Management System
+            SmartQueue<br />Service Management System
           </h1>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto">
-            Modernizing government service delivery across Ethiopia with efficient queue management and real-time tracking
+            Modernizing service delivery with efficient queue management and real-time tracking
           </p>
           <div className="flex justify-center gap-4 pt-4">
             {!isAuthenticated ? (
@@ -128,11 +128,11 @@ export const HomePage = () => {
 
         <section className="space-y-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold text-black mb-3">Supported Government Offices</h2>
-            <p className="text-gray-600">Serving major Ethiopian government institutions</p>
+            <h2 className="text-3xl font-bold text-black mb-3">Supported Service Centers</h2>
+            <p className="text-gray-600">Serving major public institutions</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {ethiopianOffices.map((office, index) => (
+            {serviceCenters.map((office, index) => (
               <Card
                 key={index}
                 hover
@@ -151,7 +151,7 @@ export const HomePage = () => {
         <section className="bg-blue-800 text-white rounded-2xl p-12 text-center space-y-6 animate-scaleIn">
           <h2 className="text-3xl font-bold">Ready to Get Started?</h2>
           <p className="text-lg text-blue-100 max-w-2xl mx-auto">
-            Join thousands of Ethiopians experiencing faster, more efficient government services
+            Join thousands of users experiencing faster, more efficient services
           </p>
           {!isAuthenticated && (
             <Button

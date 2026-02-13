@@ -19,7 +19,7 @@ from django.urls import path, include
 from django.http import JsonResponse
 
 def home(request):
-    return JsonResponse({"message": "Ethiopian Queue Management System API is running"})
+    return JsonResponse({"message": "SmartQueue Management System API is running"})
 
 urlpatterns = [
     path('', home),

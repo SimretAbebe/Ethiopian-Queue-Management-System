@@ -74,7 +74,7 @@ export const RegisterPage = () => {
             <Building2 className="h-10 w-10 text-blue-800" />
           </div>
           <h1 className="text-2xl font-bold text-black mb-2">Create Account</h1>
-          <p className="text-gray-600">Join the Ethiopian Citizens Service system</p>
+          <p className="text-gray-600">Join the SmartQueue Service system</p>
         </div>
 
         {error && (

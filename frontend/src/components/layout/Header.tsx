@@ -12,8 +12,8 @@ export const Header = () => {
           <a href="/" className="flex items-center space-x-3 group">
             <Building2 className="h-8 w-8 text-blue-800 transition-transform duration-300 group-hover:scale-110" />
             <div>
-              <h1 className="text-xl font-bold text-black">Ethiopian Citizens Service</h1>
-              <p className="text-xs text-gray-600">Queue Management System</p>
+              <h1 className="text-xl font-bold text-black">SmartQueue</h1>
+              <p className="text-xs text-gray-600">Efficient Management System</p>
             </div>
           </a>
 

@@ -1,6 +1,6 @@
 ## Queue Management System
 
-A full-stack web application designed to manage service queues for Ethiopian government offices in a simple, efficient, and user-friendly way.
+A full-stack web application designed to manage service queues for professional institutions in a simple, efficient, and user-friendly way.
 
 ## Purpose
 
@@ -24,6 +24,6 @@ User authentication and role management
 
 Queue creation and management
 
-Government office–based services (using real Ethiopian government names)
+Department-based services (using customizable institution names)
 
 API-driven backend for frontend integration
