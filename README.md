@@ -12,9 +12,9 @@ To reduce waiting time, improve service flow, and digitize queue handling for pu
 
 Database: SQLite (development), PostgreSQL (production)
 
-Frontend: Modern JavaScript framework (React / Next.js)
+Frontend: Modern JavaScript framework (React and typescript)
 
-Styling: Clean UI with black text, white & blue buttons, animations
+Styling: Clean UI with black text ,animations
 
 Authentication: Token/JWT based authentication
 
