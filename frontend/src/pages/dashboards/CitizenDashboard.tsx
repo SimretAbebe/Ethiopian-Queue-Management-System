@@ -7,7 +7,6 @@ import { useAuth } from '../../features/auth/auth.context';
 interface Office {
   id: string;
   name: string;
-  logo: string;
   services: string[];
 }
 
@@ -15,49 +14,41 @@ const ethiopianOffices: Office[] = [
   {
     id: 'moh',
     name: 'Ministry of Health',
-    logo: 'https://www.moh.gov.et/sites/default/files/2025-12/MOH.png',
     services: ['Medical Certificate', 'Health Clearance', 'License Renewal', 'Drug Registration'],
   },
   {
     id: 'moe',
     name: 'Ministry of Education',
-    logo: 'https://study.moe.gov.et/pluginfile.php/1/theme_academi/logo/1769768609/moe%20logo.png',
     services: ['Document Verification', 'Certificate Authentication', 'Equivalence Assessment', 'Student Records'],
   },
   {
     id: 'mot',
     name: 'Ministry of Transport',
-    logo: 'https://egm.motl.gov.et/assets/img/logo.png',
     services: ['Driving License', 'Vehicle Registration', 'Transport Permit', 'License Renewal'],
   },
   {
     id: 'moti',
     name: 'Ministry of Trade and Industry',
-    logo: 'https://www.ecc.gov.et/assets/tradem.jpg',
     services: ['Business License', 'Trade Registration', 'Import/Export Permit', 'Company Registration'],
   },
   {
     id: 'moa',
     name: 'Ministry of Agriculture',
-    logo: 'https://www.moa.gov.et/wp-content/uploads/2024/05/8be092791e5a37a2768386d522ddb7d03d315b79.png',
     services: ['Land Registration', 'Agricultural Permit', 'Export Certificate', 'Livestock Registration'],
   },
   {
     id: 'erca',
     name: 'Ethiopian Revenue and Customs Authority',
-    logo: 'https://newbusinessethiopia.com/wp-content/uploads/2021/06/A-Revenue-Revenue.jpg',
     services: ['Tax Clearance', 'TIN Registration', 'Customs Declaration', 'Tax Filing'],
   },
   {
     id: 'eep',
     name: 'Ethiopian Electric Power',
-    logo: 'https://www.ena.et/documents/42142/0/2020_10_5555555555555555555555555_png.png/22f417b4-f7ba-dce6-bbe7-707a2ad99148?version=1.0&t=1674399717595&download=true',
     services: ['New Connection', 'Meter Reading', 'Bill Payment', 'Power Upgrade'],
   },
   {
     id: 'aaca',
     name: 'Addis Ababa City Administration',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Addis_Ababa_City_Mayor_Office_Flag_%28FDRE%29.png',
     services: ['ID Card', 'Birth Certificate', 'Residence Permit', 'Building Permit'],
   },
 ];
@@ -228,15 +219,8 @@ export const CitizenDashboard = () => {
                     style={{ animationDelay: `${index * 50}ms` }}
                   >
                     <div className="flex flex-col items-center text-center">
-                      <div className="w-16 h-16 mb-3 rounded-lg overflow-hidden bg-gray-100 flex items-center justify-center">
-                        <img
-                          src={office.logo}
-                          alt={office.name}
-                          className="w-full h-full object-contain"
-                          onError={(e) => {
-                            (e.target as HTMLImageElement).src = 'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234B5563"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>';
-                          }}
-                        />
+                      <div className="w-16 h-16 mb-3 rounded-lg overflow-hidden bg-blue-50 flex items-center justify-center">
+                        <Building2 className="h-8 w-8 text-blue-800" />
                       </div>
                       <p className="text-sm font-medium text-black leading-tight">{office.name}</p>
                     </div>
@@ -250,14 +234,7 @@ export const CitizenDashboard = () => {
               <Card className="animate-slideInUp">
                 <h2 className="text-xl font-bold text-black mb-4">Step 2: Select Service</h2>
                 <div className="flex items-center space-x-3 mb-4 p-3 bg-blue-50 rounded-lg">
-                  <img
-                    src={selectedOffice.logo}
-                    alt={selectedOffice.name}
-                    className="w-10 h-10 object-contain rounded"
-                    onError={(e) => {
-                      (e.target as HTMLImageElement).style.display = 'none';
-                    }}
-                  />
+                  <Building2 className="w-10 h-10 text-blue-800" />
                   <div>
                     <p className="font-semibold text-black">{selectedOffice.name}</p>
                     <p className="text-sm text-gray-600">Selected Office</p>
